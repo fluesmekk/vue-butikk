@@ -1,0 +1,106 @@
+{
+  "items": [
+    {
+      "itemName": "Goodlife, 50 g",
+      "id": 1,
+      "category": "proteinbar",
+      "price": 189,
+      "img": "https://cdn.discordapp.com/attachments/798198287693905933/852154445579026452/16904d031fc225ade7e7273b8a7b4165.png",
+      "ingredients": "Melkeprotein, mørk sjokolade (20%) (kakaomasse, søtningsmiddel: maltitol, kakaosmør, melkefett, emulgeringsmiddel: soyalecitin, vanilje), fyllstoff (polydekstrose), stabiliseringsmiddel (sorbitoler), hydrolysert hvetegluten, fuktighetsbevarende middel (glycerol), solsikkeolje, fettredusert kakao, kakaomasse (1,8%), kakaonibs (1,8%), soyakrisp (sojyprotein, tapiokastivelse, salt), salt, emulgeringsmiddel (soyalecitin), søtningsmiddel (sukralose).",
+      "flavours": [
+        {
+          "title": "Chocolate Fantasy",
+          "img": "https://cdn.discordapp.com/attachments/798198287693905933/852154445579026452/16904d031fc225ade7e7273b8a7b4165.png"
+        },
+        {
+          "title": "Caramel Coco",
+          "img": "https://cdn.discordapp.com/attachments/798198287693905933/852154450445467678/d5f9cd05c5e3564f60889e865f3dd33e.png"
+        }
+      ],
+      "information": "Goodlife er kanskje Norden godeste proteinbar! Hver bar gir ca. 190 kcal, 16 g protein og 20 g karbohydrater. Perfekt som mellommåltid når som helst på dagen.",
+      "nutrients": {
+        "energy": 383,
+        "fat": 11,
+        "saturatedFats": 5.6,
+        "carbohydrates": 39.8,
+        "sugars": 34,
+        "protein": 31.7,
+        "salt": 0.59
+      }
+    },
+    {
+      "itemName": "Goodlife low sugar, 50 g",
+      "id": 2,
+      "category": "proteinbar",
+      "price": 209,
+      "img": "https://cdn.discordapp.com/attachments/798198287693905933/852162292162494504/a311489f4a0d85fae22a717f4cc34780.png",
+      "ingredients": "Melkeprotein, mørk sjokolade (20%) (kakaomasse, søtningsmiddel: maltitol, kakaosmør, melkefett, emulgeringsmiddel: soyalecitin, vanilje), fyllstoff (polydekstrose), stabiliseringsmiddel (sorbitoler), hydrolysert hvetegluten, fuktighetsbevarende middel (glycerol), solsikkeolje, fettredusert kakao, kakaomasse (1,8%), kakaonibs (1,8%), soyakrisp (sojyprotein, tapiokastivelse, salt), salt, emulgeringsmiddel (soyalecitin), søtningsmiddel (sukralose).",
+      "flavours": [
+        {
+          "title": "Chocolate Banana",
+          "img": "https://cdn.discordapp.com/attachments/798198287693905933/852162292162494504/a311489f4a0d85fae22a717f4cc34780.png"
+        },
+        {
+          "title": "Cookie Dough",
+          "img": "https://cdn.discordapp.com/attachments/798198287693905933/852162115136782386/0c0eced24786a1da54f31c99589e1363.png"
+        }
+      ],
+      "information": "En boks (15 stk) herlige Goodlife Low Sugar - en ny og sensasjonell god proteinbar med maks 170 kcal og mindre enn 2 g sukker per bar.",
+      "nutrients": {
+        "energy": 339,
+        "fat": 12.9,
+        "saturatedFats": 56.6,
+        "carbohydrates": 28.1,
+        "sugars": 2.3,
+        "protein": 30.6,
+        "salt": 0.7
+      }
+    },
+    {
+      "itemName": "Chained Nutrition Weight Lifting Belt",
+      "id": 3,
+      "category": "equipment",
+      "price": 599,
+      "information": "Chained Nutrition Weight Lifting Belt - Et belte som klarer av selv de tyngste løftene. Med et smart spenne som enkelt og raskt løsner beltet.",
+      "extra-information": "Størrelsesguide: Ditt midjemål, målene angir innerte og ytterse hull. Har du feks 84 cm i midjemål så velger du størrelse Medium.",
+      "img": "https://cdn.discordapp.com/attachments/798198287693905933/852154448125886464/c2b95ba7a98f74702c39c2506ea6ebe6.png"
+    },
+    {
+      "itemName": "CMaster Treningsbenk Silver I",
+      "id": 4,
+      "category": "equipment",
+      "price": 2510,
+      "information": "Master Treningsbenk Silver I - Kvalitativ treningsbenk fra Master av klassisk modell med flere måter å justere på og komfortable seteputer. Perfekt hjemme like mye som treningsstudioet.",
+      "extra-information": "Justerbar rygg- og sittepute. Sete og ryggdel bygget på en stabil stålstamme. 5 cm tykke puter gir god komfort. Mål LxBxH: 115 x 50 x 48 cm.Vekt: 25 kg. Max brukbar vekt: 200kg",
+      "img": "https://cdn.discordapp.com/attachments/798198287693905933/852154449626923049/d98142980d7cf053ce5d4f5b73e0fda4.png"
+    },
+    {
+      "itemName": "Supreme Any Time Protein, 900g",
+      "id": 5,
+      "category": "proteinpowder",
+      "price": 199,
+      "img": "https://cdn.discordapp.com/attachments/798198287693905933/852154452776583198/9f42a3b6f0dc0e46a60eb7f228652ee7.png",
+      "ingredients": "melkeproteinkonsentrat,myseproteinisolat, emulgeringsmiddel (soyalektin), kakao, smaksstoffer, naturligt fargestoff (rødbetsrød), salt, stabiliseringsmidel (xantanfiber), søtningsmiddel (aspartam (inneholder fenylalaninkilde), acesulfam K).",
+      "flavours": [
+        {
+          "title": "Double Chocolate",
+          "img": "https://cdn.discordapp.com/attachments/798198287693905933/852154452776583198/9f42a3b6f0dc0e46a60eb7f228652ee7.png"
+        },
+        {
+          "title": "Delicious Banana",
+          "img": "https://cdn.discordapp.com/attachments/798198287693905933/852171788351438868/7920812a90813f7eb88bab45fea27e6a.png"
+        }
+      ],
+      "information": "Supreme Any Time Protein er spesielt utviklet for å gi en fyldig proteindrikk selv når det blandes med vann. Dessuten kanskje de absolutt beste smakene ifølge våre kunder!",
+      "nutrients": {
+        "energy": 363,
+        "fat": 2.4,
+        "saturatedFats": "ingen data",
+        "carbohydrates": 5.8,
+        "sugars": "ingen data",
+        "protein": 80,
+        "salt": "ingen data"
+      }
+    }
+  ]
+}
