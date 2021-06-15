@@ -22,3 +22,12 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+vue med og css og bruk av json server
+
+npm install -g json-server
+
+cd:mappedenliggeri
+
+json-server --watch db.json
