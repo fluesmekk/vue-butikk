@@ -43,9 +43,9 @@ export default {
   },
   computed: {},
   watch: {
-    '$route': function() {
+    $route: function() {
       this.chosenPage = this.$route.path.substring(1);
-    }
+    },
   },
 };
 </script>
@@ -78,7 +78,6 @@ export default {
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
-  line-height: 36px;
   color: #000000;
   margin-right: 16%;
   margin-top: 15px;
@@ -95,7 +94,6 @@ export default {
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
-  line-height: 36px;
   color: #000000;
   margin-right: 16%;
   margin-top: 15px;
@@ -113,6 +111,8 @@ export default {
 
 .buttons {
   z-index: 1;
+  height: 90%;
+  min-width: 20px;
   margin-left: clamp(30%, 50%, 60%);
   display: flex;
   align-content: center;

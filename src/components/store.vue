@@ -4,7 +4,7 @@
     <div class="container" v-if="!selectedItem">
       <div
         class="item"
-        v-for="item in items"
+        v-for="item in currentItems"
         :key="item.id"
         @click="selectedItem = item"
       >
@@ -18,14 +18,17 @@
 </template>
 
 <script>
-import axios from "axios";
 import SingleItem from "../components/single-item.vue";
+import { mapState } from "vuex";
+import { mapActions } from "vuex";
+import { mapGetters } from 'vuex';
+var _ = require('lodash');
 
 export default {
   name: "Store",
   async created() {
-    let response = await axios.get("http://localhost:3000/items");
-    this.items = response.data;
+    await this.getItemsAction();
+    this.currentItems = _.cloneDeep(this.items)
   },
   props: {
     category: {
@@ -33,31 +36,36 @@ export default {
       default: "",
     },
   },
+  methods: {
+    ...mapActions(["getItemsAction"]),
+  },
   components: {
     SingleItem,
   },
   data() {
     return {
-      items: [],
+      currentItems: [],
       selectedItem: undefined,
       chosenCategory: this.category,
     };
   },
+  computed: {
+    ...mapGetters(['getItemsByCategory']),
+    ...mapState(["items"]),
+  },
   watch: {
-    async category() {
+    category() {
+      console.log(this.currentItems);
       this.chosenCategory = this.category;
-      let response = await axios.get(
-        `http://localhost:3000/items?q=${this.chosenCategory}`
-      );
-      this.items = response.data;
+      this.currentItems = this.getItemsByCategory(this.chosenCategory);
     },
   },
 };
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Pompiere&display=swap");
-</style>;
+@import url("https://fonts.googleapis.com/css2?family=Pompiere&display=swap");</style
+>;
 
 <style lang="css" scoped>
 .parent-container {

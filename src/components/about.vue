@@ -16,14 +16,11 @@
   </div>
 </template>
 
-
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Pompiere&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pompiere&display=swap");
 </style>
 
 <script>
-
-
 export default {
   name: "About",
 };
@@ -31,10 +28,9 @@ export default {
 
 <style lang="css" scoped>
 img {
-  margin-top: 70px;
+  margin-top: 110px;
   height: 100%;
   margin-left: 12%;
-  padding-top: 7%;
 }
 .cointainer {
   height: 100%;
@@ -42,14 +38,36 @@ img {
   grid-template: 40% 40%/ 50% 50%;
 }
 
+@media only screen and (max-width: 1068px) {
+  .cointainer {
+    height: 70%;
+    display: grid;
+    grid-template-rows: 180px 200px 200px;
+  }
+  .img {
+    width: 100%;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .text {
+    grid-column: 2;
+    grid-row: 1;
+    height: 200px;
+    padding-bottom: 10px;
+    font-size: 10px;
+  }
+}
+
 .text {
+  margin-left: -10px;
   height: 30%;
   grid-column: 2;
   grid-row: 1;
 }
 
 .about {
-  font-family: 'Pompiere', cursive;
+  margin-left: -10px;
+  font-family: "Pompiere", cursive;
   text-align: start;
   font-size: 20px;
   border: solid #ffffff 1px;

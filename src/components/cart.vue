@@ -35,7 +35,7 @@
             </div>
           </div>
           <div class="sendOrder">
-              <p>Send Bestilling</p>
+            <p class="send">Send Bestilling</p>
           </div>
         </div>
       </div>
@@ -44,19 +44,50 @@
           <p class="kasse">Kasse</p>
         </div>
 
-        <div class="cart__Options"></div>
+        <div class="cart__Options">
+          <div class="item" v-for="item in cart" :key="item.id">
+            <div class="title">{{ item.itemName }}</div>
+            <div class="price">{{ item.price }},-</div>
+            <div class="img"><img :src="item.img" class="img" /></div>
+            <div class="delete">
+              <h5 @click="removeFromCart(item)">Fjern</h5>
+            </div>
+          </div>
+          <div class="total">
+            <p>Total:</p>
+            <p class="totalPrice">{{ calculateTotal }},-</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { mapState } from "vuex";
+import { mapMutations } from "vuex";
+
 export default {
   name: "Cart",
   data() {
     return {
       items: [],
     };
+  },
+  computed: {
+    ...mapState(["cart"]),
+    calculateTotal: function() {
+      if (this.cart == []) {
+        return 0;
+      } else {
+        let total = 0;
+        this.cart.forEach((item) => (total += item.price));
+        return total;
+      }
+    },
+  },
+  methods: {
+    ...mapMutations(["removeFromCart"]),
   },
 };
 </script>
@@ -67,7 +98,7 @@ export default {
 
 <style lang="css" scoped>
 .parent-container {
-  height: 100%;
+  height: 96%;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -76,7 +107,7 @@ export default {
 
 .container {
   margin-top: 9.2%;
-  height: 80%;
+  height: 84%;
   width: 90%;
   background-color: #b4d8e6;
   border: solid #b4d8e6 1px;
@@ -116,43 +147,43 @@ export default {
 }
 
 .click {
-    margin-left: 2%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 5vh;
+  margin-left: 2%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 5vh;
 }
 
 .sendOrder {
-    display: flex;
-    align-items: center;
-    height: 4%;
-    padding: 10px;
-    margin-top: 5%;
-    margin-left: 60%;
-    background-color: #C4C4C4;
-    border: solid #C4C4C4 3px;
-    border-radius: 5px;
+  display: flex;
+  align-items: center;
+  height: 4%;
+  padding: 10px;
+  margin-top: 5%;
+  margin-left: 60%;
+  background-color: transparent;
+  border: solid transparent 3px;
+  border-radius: 5px;
 }
 
 .sendOrder:hover {
-    border: rgb(151, 195, 122) solid 3px;
+  border: rgb(151, 195, 122) solid 3px;
 }
 
 .click > p {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .circle {
-    background-color: rgb(163, 163, 163);
-    width: 3%;
-    height: 25%;
-    border: rgb(163, 163, 163) solid 3px;
-    border-radius: 10px;
+  background-color: rgb(163, 163, 163);
+  width: 3%;
+  height: 25%;
+  border: rgb(163, 163, 163) solid 3px;
+  border-radius: 10px;
 }
 
 .circle:hover {
-    border: rgb(151, 195, 122) solid 3px;
+  border: rgb(151, 195, 122) solid 3px;
 }
 
 p,
@@ -162,23 +193,119 @@ pre {
   text-align: start;
 }
 
-
-
 .shipping__Options > div > p,
 .cart__Options > div > p,
 pre {
   color: white;
 }
 
+.title,
+.price,
+.delete {
+  color: white;
+  font-family: "Pompiere", cursive;
+}
+
+.title {
+  font-size: 20px;
+}
+
+.cart,
+.shipping {
+  min-width: 459.806px;
+}
+
 .cart__Options {
+  overflow-y: scroll;
+  height: 30%;
+}
+
+.item {
+  background-color: #888282;
+  border: solid #888282 1px;
+  border-radius: 10px;
+  padding-top: 7px;
+  margin-top: 8px;
+  margin-left: 5%;
+  margin-right: 2%;
+  padding-right: 8px;
+  display: grid;
+  height: 117px;
+  width: 89.6%;
+  max-width: 324px;
+  grid-template-rows: 80px 24px;
+  grid-template-columns: 3fr 2fr;
+}
+
+.img {
+  height: 100%;
+  grid-area: 1 / 2;
+}
+
+.title {
+  text-align: start;
+  padding-left: 8px;
+}
+
+.price {
+  grid-area: 2 / 1;
+  font-size: 35px;
+  text-align: start;
+  padding-left: 18px;
+  margin-top: -6%;
+}
+
+.delete {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  grid-area: 2 / 2;
+  width: 90%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+h5 {
+  background-color: black;
+  padding: 2px;
+  border: solid black 3px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+h5:hover {
+  border: solid rgb(103, 206, 72) 3px;
+}
+
+.total {
+  max-width: 89%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  margin-top: 8px;
+  padding-left: 10px;
+  margin-left: 5%;
+  margin-right: 2%;
+  background-color: #888282;
+  border: solid #888282 1px;
+  border-radius: 10px;
+  text-align: end;
+  grid-row-start: 6;
+  grid-row-end: 7;
+}
+
+.totalPrice {
+  text-align: end;
 }
 
 .cart__Options,
 .shipping__Options {
   margin-left: 10%;
   background-color: #2f4858;
-  width: 80%;
-  height: 80%;
+  width: 82%;
+  max-height: 600px;
+  height: 73%;
   border: solid #2f4858 1px;
   border-radius: 25px;
 }

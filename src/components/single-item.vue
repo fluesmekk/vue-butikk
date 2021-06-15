@@ -8,7 +8,10 @@
         <div class="price">{{ item.price }},-</div>
       </div>
     </div>
-    <div class="nutrients" v-if="item.category == 'proteinbar' || item.category == 'proteinpowder'">
+    <div
+      class="nutrients"
+      v-if="item.category == 'proteinbar' || item.category == 'proteinpowder'"
+    >
       <div class="information">Næring per 100g</div>
       <div class="energy box">
         <div class="info">{{ toKey(item.nutrients, 0) }}</div>
@@ -49,6 +52,7 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Pompiere&display=swap');
 </style>;
+import { mapMutations } from "vuex";
 
 export default {
   name: "SingleItem",
@@ -56,6 +60,7 @@ export default {
     item: Object,
   },
   methods: {
+    ...mapMutations(["addToCart"]),
     toKey: function(string, i) {
       let key = Object.keys(string)[i];
       return key.charAt(0).toUpperCase() + key.slice(1);
@@ -163,11 +168,16 @@ div {
 .button {
   margin-top: 40%;
   margin-left: 30%;
-  background-color: #C4C4C4;
-  border: solid #C4C4C4 1px;
+  background-color: #c4c4c4;
+  border: solid #c4c4c4 4px;
   border-radius: 12px;
   height: 10%;
   text-align: center;
   padding-top: 12px;
+}
+
+.button:hover {
+  border: solid #42bb3e 4px;
+  border-radius: 12px;
 }
 </style>
